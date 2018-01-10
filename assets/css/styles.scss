@@ -1,0 +1,55 @@
+---
+---
+
+@import "{{ site.theme }}";
+/*
+   Styles for span classes to identify different object types
+   ========================================================================== */
+.terminal {
+       background-color: black;
+       color: white;
+       font-family: "Courier New", Courier, Monospace;
+       font-size:large;
+   }
+.menu {
+       background-color: #DCDCDC;
+       color: black;
+       font-family: "Times New Roman", Times, serif;
+       font-size:large;
+       border: 1px solid black;
+   }
+.finder {
+       color: #808080;
+       font-family: "Lucida Grande", Tahoma, Sans-serif;
+   }
+.file {
+      color: #808080;
+      font-family: "Lucida Grande", Tahoma, Sans-serif;
+      }
+.button {
+        background-color: #99ff99;
+        color: #006600;
+        font-family: "Lucida Grande", Tahoma, Sans-serif;
+        border: 1px solid black;
+      }
+.textbox{
+        color: black;
+        font-family: "Lucida Grande", Tahoma, Sans-serif;
+        border: 1px solid black;
+      }
+.checkbox{
+        background-color: #e6e6ff;
+        color: black;
+        font-family: "Lucida Grande", Tahoma, Sans-serif;
+      }
+.tab{
+        background-color: #ffffb3;
+        color: #392613;
+        font-family: "Lucida Grande", Tahoma, Sans-serif;
+        border: 1px solid #392613;
+    }
+
+.app{
+      color: red;
+      font-family: "Lucida Grande", Tahoma, Sans-serif;
+    }

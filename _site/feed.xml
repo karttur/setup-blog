@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/setup-blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/setup-blog/" rel="alternate" type="text/html" /><updated>2017-12-30T11:22:16+01:00</updated><id>http://localhost:4000/setup-blog/</id><title type="html">Geo Imagine Developer</title><subtitle>Remote sensing and spatial data developer guide for global natural resources mapping, inventories and monitoring.</subtitle><entry><title type="html">Set up blog tools: Jekyll and Atom</title><link href="http://localhost:4000/setup-blog/2017/12/21/setup-blog-tools.html" rel="alternate" type="text/html" title="Set up blog tools: Jekyll and Atom" /><published>2017-12-21T07:58:00+01:00</published><updated>2017-12-21T07:58:00+01:00</updated><id>http://localhost:4000/setup-blog/2017/12/21/setup-blog-tools</id><content type="html" xml:base="http://localhost:4000/setup-blog/2017/12/21/setup-blog-tools.html">&lt;p&gt;&lt;strong&gt;Contents&lt;/strong&gt;
+	- &lt;a href=&quot;#introduction&quot;&gt;Introduction&lt;/a&gt;
+	- &lt;a href=&quot;#install-atom&quot;&gt;Install Atom&lt;/a&gt;
+	- &lt;a href=&quot;#install-jekyll-dependencies&quot;&gt;Install Jekyll dependencies&lt;/a&gt;
+		- &lt;a href=&quot;#opening-and-understanding-the-terminal&quot;&gt;Opening and understanding the Terminal&lt;/a&gt;
+		- &lt;a href=&quot;#install-xcode-and-its-command-line-tool&quot;&gt;Install Xcode and its Command Line Tool&lt;/a&gt;
+		- &lt;a href=&quot;#install-homebrew&quot;&gt;Install Homebrew&lt;/a&gt;
+		- &lt;a href=&quot;#install-ruby-version-manger-rvm&quot;&gt;Install Ruby Version Manger (RVM)&lt;/a&gt;
+		- &lt;a href=&quot;#install-ruby&quot;&gt;Install Ruby&lt;/a&gt;
+	- &lt;a href=&quot;#install-jekyll&quot;&gt;Install Jekyll&lt;/a&gt;
+		- &lt;a href=&quot;#edit-the-configuration-configyml&quot;&gt;Edit the configuration (_config.yml)&lt;/a&gt;
+		- &lt;a href=&quot;#cusomized-css&quot;&gt;Cusomized CSS&lt;/a&gt;
+			- &lt;a href=&quot;#extending-the-css&quot;&gt;Extending the CSS&lt;/a&gt;
+			- &lt;a href=&quot;#customised-includes&quot;&gt;Customised _includes&lt;/a&gt;
+		- &lt;a href=&quot;#writing-this-blog-post&quot;&gt;Writing this blog post&lt;/a&gt;
+	- &lt;a href=&quot;#next-blog-setup-github-pages&quot;&gt;Next blog (Setup GitHub pages)&lt;/a&gt;
+	- &lt;a href=&quot;#resources&quot;&gt;Resources&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;This blog post is for remembering how I set up the tools for writing my own blog posts.&lt;/p&gt;
+
+&lt;p&gt;After looking at different alternatives, I decided to try &lt;a href=&quot;https://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; that is available from &lt;a href=&quot;https://github.com&quot;&gt;GitHub&lt;/a&gt;. A main reason is that it relies more on coding and less on graphical interfaces. And that is how I am used to work with Geo Imagine and writing my scientific texts.&lt;/p&gt;
+
+&lt;p&gt;Jekyll expects a &lt;a href=&quot;https://daringfireball.net/projects/markdown&quot;&gt;‘markdown’&lt;/a&gt; file for each blog, and I needed to find a text editor that facilitates generating markdown text files. Browsing different alternatives I settled for &lt;a href=&quot;https://atom.io&quot;&gt;Atom&lt;/a&gt;. Atom is advertised as ‘A hackable text editor’, and it resembles the text editor (TeXShop) that I use for scientific writing.&lt;/p&gt;
+
+&lt;h2 id=&quot;install-atom&quot;&gt;Install Atom&lt;/h2&gt;
+&lt;p&gt;Installing Atom is much simpler than installing Jekyll, and you will also need Atom for some text editing for creating your blog. So let us start with installing Atom.&lt;/p&gt;
+
+&lt;p&gt;For macOS, Atom is available as a disk image, and is installed by &lt;a href=&quot;https://atom.io&quot;&gt;downloading&lt;/a&gt;, and opening the diskimage, and then just dragging &lt;span class=&quot;file&quot;&gt;Atom.app&lt;/span&gt; to the &lt;span class=&quot;finder&quot;&gt;/Applications&lt;/span&gt; folder.&lt;/p&gt;
+
+&lt;p&gt;Atom can be used for many writing and editing tasks, of which generating markdown text is only one. To set up Atom for creating markdown files, you need to install the necessary packages. For this blogpost I used three packages:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;markdown-writer,&lt;/li&gt;
+  &lt;li&gt;markdown-preview-plus, and&lt;/li&gt;
+  &lt;li&gt;markdown-toc.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To install these packages, start &lt;span class=&quot;app&quot;&gt;Atom&lt;/span&gt;. Then go via the Atom menu:&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;menu&quot;&gt;Atom : Preferences&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;span class=&quot;tab&quot;&gt;Settings&lt;/span&gt; pane opens in the main window. In the navigation part of the pane, click &lt;span class=&quot;button&quot;&gt;Packages&lt;/span&gt; to see which packages are installed. To install other packages (and Themes) click on the &lt;span class=&quot;button&quot;&gt;Install&lt;/span&gt; button at the bottom of the navigation part of the &lt;span class=&quot;tab&quot;&gt;Settings&lt;/span&gt; pane. In the box for &lt;span class=&quot;textbox&quot;&gt;Search packages&lt;/span&gt; that appears, write the name or content of the package you want to install, and hit return. You will get a list of packages that fit your search. Click on the &lt;span class=&quot;button&quot;&gt;Install&lt;/span&gt; button for the package you want to install.&lt;/p&gt;
+
+&lt;p&gt;You do not need to use Atom right now, but if you want to try it out for writing markdown code, go via the Atom main menu:&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;menu&quot;&gt;Packages : Markdown Writer : File : Add New Post&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;To actually write the blog, you need to learn how markdown interprets different codes written into the pure text. For instance how to set different headings, typefaces, and bold, italics or underscore. The approach used by Atom is similar to TeXShop (even if the coding varies), and this is a main reason that I chose to use Jekyll and Atom for writing this blog post.&lt;/p&gt;
+
+&lt;p&gt;We are not going to use Atom until we have created a template blog using Jekyll, so let us proceed and install Jekyll and its dependencies.&lt;/p&gt;
+
+&lt;h2 id=&quot;install-jekyll-dependencies&quot;&gt;Install Jekyll dependencies&lt;/h2&gt;
+
+&lt;p&gt;Jekyll is written in the programming language &lt;a href=&quot;https://www.ruby-lang.org/&quot;&gt;Ruby&lt;/a&gt;, and even if macOS contains a system version of Ruby, I recommend installing a stand alone version of Ruby to use with non-system applications (apps). Doing so, however, turns into a cascade of dependencies being required, and you need to sequentially install:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/xcode/&quot;&gt;Xcode&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://idmsa.apple.com/IDMSWebAuth/login?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&amp;amp;path=%2Fdownload%2Fmore%2F&amp;amp;rv=1&quot;&gt;Xcode Command Line Tool tools&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://brew.sh&quot;&gt;Homebrew&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://rvm.io&quot;&gt;Ruby Version Manager (RVM)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.ruby-lang.org/en/&quot;&gt;Ruby&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Xcode is installed via the Apple &lt;span class=&quot;app&quot;&gt;App store.app &lt;/span&gt;(an app installed with macOS), Xcode Command Line Tool by dowloading a disk image (.dmg) that contains a package installer (.pkg). Homebrew, RVM and Ruby are installed by commands written in the Terminal. If you are not used to the Terminal, the next section includes a short introduction.&lt;/p&gt;
+
+&lt;h3 id=&quot;opening-and-understanding-the-terminal&quot;&gt;Opening and understanding the Terminal&lt;/h3&gt;
+
+&lt;p&gt;The Terminal provides text-based access to the operating system, in macOS as well in other operating systems.&lt;/p&gt;
+
+&lt;p&gt;The Terminal itself is an app, and on macOS you find it under:&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;finder&quot;&gt;/Applications/Utilities&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;You will use the Terminal quite a lot if you follow this blog, so it is handy to drag it onto your dock. Open a terminal session by double clicking the &lt;span class=&quot;app&quot;&gt;Terminal&lt;/span&gt; icon. You should see a window with a cursor and prompt, including the following components:&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;terminal&quot;&gt;computername:~ myuser$&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;where ‘computername’ is the name of the computer, the tilde (~) indicates that you are in your home directory, ‘myuser’ the name of the current user, and a trailing $ which is the prompt for input.&lt;/p&gt;
+
+&lt;h3 id=&quot;install-xcode-and-its-command-line-tool&quot;&gt;Install Xcode and its Command Line Tool&lt;/h3&gt;
+&lt;p&gt;Before installing Jekyll on a mac, the Apple developer environment Xcode, and its &lt;a href=&quot;https://idmsa.apple.com/IDMSWebAuth/login?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&amp;amp;path=%2Fdownload%2Fmore%2F&amp;amp;rv=1&quot;&gt;Command Line Tool&lt;/a&gt;, must be installed.&lt;/p&gt;
+
+&lt;p&gt;Xcode is an app, and if you have it installed, it will be in your &lt;span class=&quot;finder&quot;&gt;/Applications&lt;/span&gt; folder. If not, Xcode is available from the Apple &lt;span class=&quot;app&quot;&gt;App store&lt;/span&gt;, that is installed with all recent macOS:&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;finder&quot;&gt;/Applications/App store.app&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;You also need the Xcode Command Line Tool, that includes a compiler for Open Source projects called GCC. To check if you have GCC installed, open a &lt;span class=&quot;app&quot;&gt;Terminal&lt;/span&gt; window and type at the prompt:&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;terminal&quot;&gt;$ gcc –version&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;If a version is returned, you are probably fine to go. Otherwise, you must download and install the &lt;a href=&quot;https://developer.apple.com/xcode/features/&quot;&gt;Command Line Tools&lt;/a&gt; for Xcode. To access the downloads you may need to register as an Apple developer. Once you are on the downloads page, search the appropriate version of your macOS. Click on the .dmg link to download it. Once it has finished downloading, simply double-click the .dmg file and then double-click the enclosed .pkg file to start the installation process.&lt;/p&gt;
+
+&lt;h3 id=&quot;install-homebrew&quot;&gt;Install Homebrew&lt;/h3&gt;
+
+&lt;p&gt;Homebrew in a package (or app) manager, that installs apps on macOS platforms. There are alternatives to Homebrew (including Fink and MacPorts). I have tried them all, and I like Homebrew better than the other two.&lt;/p&gt;
+
+&lt;p&gt;To install Homebrew, open a &lt;span class=&quot;app&quot;&gt;Terminal&lt;/span&gt; window and type (or copy and paste) the command:&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;terminal&quot;&gt;$ /usr/bin/ruby -e “$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)”&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Homebrew will create a special repository of installed packages and then symlinks their files into &lt;span class=&quot;file&quot;&gt;/usr/local&lt;/span&gt;.&lt;/p&gt;
+
+&lt;p&gt;Note that Homebrew uses the macOS version of Ruby, but it is better to have a separate Ruby installation for handling non system Apps, including Jekyll. The next step is thus to install the Ruby Version Manager (RVM) and then the latest version of Ruby as a separate stand alone app.&lt;/p&gt;
+
+&lt;h3 id=&quot;install-ruby-version-manger-rvm&quot;&gt;Install Ruby Version Manger (RVM)&lt;/h3&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://rvm.io&quot;&gt;Ruby Version Manager (RVM)&lt;/a&gt; is used for managing stand alone versions of Ruby, and also allows you to access that Ruby version directly from the Terminal prompt. To install RVM, open a &lt;span class=&quot;app&quot;&gt;Terminal&lt;/span&gt; window, and write:&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;terminal&quot;&gt;$ curl -L https://get.rvm.io | bash -s stable&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;This installs RVM for your user. Note the last lines at the Terminal prompt when the installation is completed, as you might need to edit your system profile file. If you are requested to edit your system profile file (either &lt;span class=&quot;file&quot;&gt;.bash_profile&lt;/span&gt; or &lt;span class=&quot;file&quot;&gt;.profile&lt;/span&gt;), you need a text editor to open and edit files from the Terminal window. Terminal comes with some different text editors, and I use pico for editing system files. To be able to edit system files you need to tell the system that you have the rights to do so, and that you do with the command sudo (interpreted as superuser do or substitute user do). In combination you should thus write the following command at the Terminal prompt:&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;terminal&quot;&gt;$ sudo pico .bash_profile&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;or&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;terminal&quot;&gt;$ sudo pico .profile&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;You must give your user password to access and edit the indicated file (&lt;span class=&quot;file&quot;&gt;.bash_profile&lt;/span&gt; or &lt;span class=&quot;file&quot;&gt;.profile&lt;/span&gt;). Add the text that the RVM installation suggested. Save the edited profile file by pressing the keys for ctrl and X simultaneously (ctrl-x), hit the Y key when asked to save the file, and you have edited the system profile. You need to close and reopen the Terminal window for the changes to take effect.&lt;/p&gt;
+
+&lt;p&gt;To start using RVM you need to execute another Terminal command,&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;terminal&quot;&gt;$ source .rvm/scripts/rvm&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;in all your open Terminal windows. Then close all open Terminal windows, and reopen a new Terminal window.&lt;/p&gt;
+
+&lt;p&gt;Confirm that RVM is being properly loaded in the new Terminal session by typing&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;terminal&quot;&gt;$ rvm –version&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;You should see a version number with no errors.&lt;/p&gt;
+
+&lt;h3 id=&quot;install-ruby&quot;&gt;Install Ruby&lt;/h3&gt;
+
+&lt;p&gt;With RVM installed, install the latest Ruby version (2.4.3 at time of writing) from the Terminal:&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;terminal&quot;&gt;$ rvm install 2.4.3&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;The RVM installation will first search for a predefined (binary) installer, and if not proceed to compile the requested version from source. In the latter case RVM relies on Homebrew. If Homebrew is not installed, RVM will automatically install Homebrew after asking for permission.&lt;/p&gt;
+
+&lt;p&gt;When the installation is done, close your Terminal session and open a new Terminal session. Set the version of Ruby that you installed to the current version by typing:&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;terminal&quot;&gt;$ rvm –default use 2.4.3&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;This also sets the default version to be used whenever you open any new Terminal session.&lt;/p&gt;
+
+&lt;p&gt;Verify that the current Ruby version by typing&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;terminal&quot;&gt;$ ruby -v&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Generate the core Ruby documentation by typing&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;terminal&quot;&gt;$ rvm docs generate-ri&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;You are done installing a stand alone Ruby version that is now the default Ruby version accessed by the Terminal.&lt;/p&gt;
+
+&lt;p&gt;Note that if you want to use the &lt;a href=&quot;http://rubyonrails.org&quot;&gt;Rails programming language&lt;/a&gt; with Ruby, you must install that on top of Ruby.&lt;/p&gt;
+
+&lt;h2 id=&quot;install-jekyll&quot;&gt;Install Jekyll&lt;/h2&gt;
+
+&lt;p&gt;Open a new Terminal window. Make sure that your Terminal links to the Ruby version you installed above, by typing:&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;terminal&quot;&gt;$ ruby -v&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;The Terminal window should return the version you installed above.&lt;/p&gt;
+
+&lt;p&gt;To install Jekyll enter the following command at the Terminal prompt:&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;terminal&quot;&gt;$ gem install jekyll bundler&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;If your system requires root permissions to install Jekyll, you have to add sudo, and instead write:&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;terminal&quot;&gt;$ sudo gem install jekyll bundler&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;You will then be prompted to give the root user password, whereafter the installation will proceed.&lt;/p&gt;
+
+&lt;p&gt;If you followed the instructions above, and installed a stand alone version of Ruby using RVM, and told the system to use this version as the default Ruby version from the Terminal, you will have access to Jekyll whenever you get back to the Terminal. If you used the macOS Ruby version, you will not.&lt;/p&gt;
+
+&lt;p&gt;When the Jekyll installation is complete, you can create a blog by writing the following command at the Terminal prompt:&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;terminal&quot;&gt;$ jekyll new setup-blog&lt;/span&gt; (instead of setup-blog you can write any name)&lt;/p&gt;
+
+&lt;p&gt;Change directory (cd) to the newly created blog by writing at the prompt:&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;terminal&quot;&gt;$ cd setup-blog&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Press the return button, and the terminal prompt should indicate that you are in the folder called setup-blog.&lt;/p&gt;
+
+&lt;p&gt;Jekyll comes with a default blog that explains how it works. The blog is, however, not available until you tell Jekyll to create it:&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;terminal&quot;&gt;$ bundle exec jekyll serve&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;With this command, Jekyll takes the setup files (that will be edited below) and the markdown files it can find, and generates the entire blog, including all blogposts. At the same time Jekyll creates a local server on your computer allowing you to browse the blog. The local url of your blog is written at the prompt (default is http://127.0.0.1:4000/). Copy the url and paste it into your web-browser.&lt;/p&gt;
+
+&lt;p&gt;In the browser you can see the blog front page, and the Jekyll example blog. They contain useful information on how to edit the included files to suite your blog.&lt;/p&gt;
+
+&lt;p&gt;Jekyll will live update the local server when you make changes in your Atom Project. You only need to refresh the local web page in your browser to see any changes. So leave the server running. Otherwise you close the server from the Terminal prompt by pressing the keys ctrl and C at the same time:&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;terminal&quot;&gt;$ ctrl-c&lt;/span&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;edit-the-configuration-_configyml&quot;&gt;Edit the configuration (_config.yml)&lt;/h3&gt;
+
+&lt;p&gt;The Jekyll example blog is of course not want you want to publish. The main controller of the common content and layout of all the pages in your blog is in the file &lt;span class=&quot;file&quot;&gt;_config.yml. _config.yml&lt;/span&gt; is a static file, and the content of &lt;span class=&quot;file&quot;&gt;_config.yml&lt;/span&gt; will be reflected in all pages related to your blog.&lt;/p&gt;
+
+&lt;p&gt;Start &lt;span class=&quot;app&quot;&gt;Atom&lt;/span&gt;, and wait for the &lt;span class=&quot;tab&quot;&gt;Welcome Guide&lt;/span&gt; pane to open. In the &lt;span class=&quot;tab&quot;&gt;Welcome Guide&lt;/span&gt; click &lt;span class=&quot;button&quot;&gt;Open Project&lt;/span&gt;, then navigate to the folder you created with Jekyll (&lt;span class=&quot;file&quot;&gt;setup-blog&lt;/span&gt;), and select the folder itself as the Project. A &lt;span class=&quot;tab&quot;&gt;Project&lt;/span&gt; pane will open in the Atom window. In the &lt;span class=&quot;tab&quot;&gt;Project&lt;/span&gt; pane, click the &lt;span class=&quot;file&quot;&gt;_config.yml&lt;/span&gt; file.&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;file&quot;&gt;_config.yml&lt;/span&gt; file is well commented, and you can enter the details for the blog you are about to create. Change the title, description and baseurl tags, where the latter should have the same name as your Project (which will become an online repository in you later share it in GitHub as described in the next blog post). Here is an excerpt of &lt;span class=&quot;file&quot;&gt;_config.yml&lt;/span&gt; for this blog post:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;title: Geo Imagine Developer
+description: &amp;gt;- # this means to ignore newlines until &quot;baseurl:&quot;
+  Remote sensing and spatial data developer guide
+  for global natural resources mapping,
+  inventories and monitoring.
+baseurl: &quot;/setup-blog&quot; # the subpath of your site
+markdown: kramdown
+theme: minima
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Then I also edited the file &lt;span class=&quot;file&quot;&gt;_about.md&lt;/span&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+layout: page
+title: About
+permalink: /about/
+---
+
+The Geo Imagine Developer blog is maintained by Thomas Gumbricht (Karttur AB) [karttur.com](https://karttur.com/)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;cusomized-css&quot;&gt;Cusomized CSS&lt;/h3&gt;
+
+&lt;p&gt;There are different options for changing the Cascading Style Sheet (CSS) that defines your blog layout and style. The CSS file that defines the overall style of html pages is in the &amp;lt;head&amp;gt; tag of the html file. By default the Jekyll &lt;a href=&quot;https://github.com/jekyll/minima&quot;&gt;minima theme&lt;/a&gt; (used in here), links to the CSS file &lt;span class=&quot;file&quot;&gt;/assets/main.css&lt;/span&gt;. This CSS file is generated by Jekyll, but we can bypass the default CSS file, by:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Extending the default CSS&lt;/li&gt;
+  &lt;li&gt;Create Customised _includes&lt;/li&gt;
+  &lt;li&gt;Linking the extended CSS to the customised _includes&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;extending-the-css&quot;&gt;Extending the CSS&lt;/h4&gt;
+
+&lt;p&gt;In the Atom &lt;span class=&quot;tab&quot;&gt;Project&lt;/span&gt; pane, locate the folder &lt;span class=&quot;file&quot;&gt;_site&lt;/span&gt;. The folder contains your static web page generated by Jekyll. In the subfolder &lt;span class=&quot;file&quot;&gt;_site/assets&lt;/span&gt; you will see the file &lt;span class=&quot;file&quot;&gt;main.css&lt;/span&gt;, the default CSS file in the theme minima. Just leave it.&lt;/p&gt;
+
+&lt;p&gt;Create a file called &lt;span class=&quot;file&quot;&gt;/assets/css/style.scss&lt;/span&gt; in your Project (repository). To create the path &lt;span class=&quot;file&quot;&gt;/assets/css&lt;/span&gt; and the file &lt;span class=&quot;file&quot;&gt;style.scss&lt;/span&gt; you can use Atom. Select the Project top folder (setup-blog) and ctrl-click (or left click) on your track pad or mouse, from the list that appears you can choose to create both folders and files.&lt;/p&gt;
+
+&lt;p&gt;Add the following content to the beginning of the file &lt;span class=&quot;file&quot;&gt;style.scss&lt;/span&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+---
+
+@import &quot;{{ site.theme }}&quot;;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Custom CSS added after the @import line will be added to the default css file, and the combined css file saved in your &lt;span class=&quot;file&quot;&gt;_site&lt;/span&gt; folder with the path cloned from your customised css file (this will clear further down).&lt;/p&gt;
+
+&lt;p&gt;For this blog I added the css styles used for highlighting different object types (&lt;span class=&quot;menu&quot;&gt;menu&lt;/span&gt;, &lt;span class=&quot;button&quot;&gt;buttons&lt;/span&gt;,&lt;span class=&quot;tab&quot;&gt;tabs and panes&lt;/span&gt; etc). As an example, the style for &lt;span class=&quot;menu&quot;&gt;menu&lt;/span&gt; is:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.menu {
+       background-color: #DCDCDC;
+       color: black;
+       font-family: &quot;Times New Roman&quot;, Times, serif;
+       font-size:large;
+       border: 1px solid black;
+   }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;If your Jekyll server is up and running, a new subfolder with a css file will appear &lt;span class=&quot;file&quot;&gt;_site/assets/css/styles.css&lt;/span&gt;. If you open that css file in Atom, and compare it with &lt;span class=&quot;file&quot;&gt;_site/assets/main.css&lt;/span&gt;, you will see that the two are identical, except that &lt;span class=&quot;file&quot;&gt;_site/assets/css/styles.css&lt;/span&gt; is extended with the code you entered in &lt;span class=&quot;file&quot;&gt;/assets/css/style.scss&lt;/span&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;customised-_includes&quot;&gt;Customised _includes&lt;/h4&gt;
+
+&lt;p&gt;You now have to change your blog html files to point to the extended CSS file. This is done by creating a new file &lt;span class=&quot;file&quot;&gt;_includes/head.html&lt;/span&gt;. This file will take precedence over the default minima theme head.html. Go ahead and create the file &lt;span class=&quot;file&quot;&gt;_includes/head.html&lt;/span&gt;, and copy and paste the following code:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;head&amp;gt;
+  &amp;lt;meta charset=&quot;utf-8&quot;&amp;gt;
+  &amp;lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&amp;gt;
+  &amp;lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&amp;gt;
+  {% seo %}
+  &amp;lt;link rel=&quot;stylesheet&quot; href=&quot;{{ &quot;/assets/css/styles.css&quot; | relative_url }}&quot;&amp;gt;
+  &amp;lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;{{ site.title | escape }}&quot; href=&quot;{{ &quot;/feed.xml&quot; | relative_url }}&quot;&amp;gt;
+  {% if jekyll.environment == 'production' and site.google_analytics %}
+    {% include google-analytics.html %}
+  {% endif %}
+&amp;lt;/head&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The only difference compared to the minima theme head.html is the link to the stylesheet.&lt;/p&gt;
+
+&lt;p&gt;If this was a perfect world, the Jekyll server should now serve up your restyled web page. But my version of Jekyll (3.6.2) did not. Instead it reports an error (in the Terminal window). The errors is caused by the seo tag in the local version of &lt;span class=&quot;file&quot;&gt;head.html&lt;/span&gt;, the file that you just created.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{% seo %}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The seo tag creates data for search engines, and requires both a special gem, and to be included in the &lt;span class=&quot;file&quot;&gt;_config.yml&lt;/span&gt; file. Let us fix that.&lt;/p&gt;
+
+&lt;p&gt;In Atom, open the &lt;span class=&quot;file&quot;&gt;Gemfile&lt;/span&gt; in top directory of your Project, and add the gem for the seo tag, by adding the following line:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem &quot;jekyll-seo-tag&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Save the &lt;span class=&quot;file&quot;&gt;Gemfile&lt;/span&gt;.&lt;/p&gt;
+
+&lt;p&gt;Open &lt;span class=&quot;file&quot;&gt;_config.yml&lt;/span&gt; and add the seo tag as a plugin:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;plugins:
+  - jekyll-seo-tag
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;If you are using a Jekyll version less than 3.5.0, use the ‘gems’ key instead of ‘plugins’.&lt;/p&gt;
+
+&lt;p&gt;Remember to save &lt;span class=&quot;file&quot;&gt;_config.yml&lt;/span&gt; after editing.&lt;/p&gt;
+
+&lt;p&gt;Your restyled web page should be served up.&lt;/p&gt;
+
+&lt;h3 id=&quot;writing-this-blog-post&quot;&gt;Writing this blog post&lt;/h3&gt;
+
+&lt;p&gt;The text and style of this blog is written using Markdown Writer in Atom. The theme is set in the file &lt;span class=&quot;file&quot;&gt;_config.yml&lt;/span&gt;, using a single command:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;theme: minima
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;When writing the blog I only used a few markdown codes.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Headings (there must be a space after the #)
+# H1
+## H2
+### H3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Bold typeface
+**bold text**
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Unordered list
+- (or +, or *)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Url link
+[text](url)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;I finally used the package markdown-toc to generate the table of contents.&lt;/p&gt;
+
+&lt;p&gt;The first paragraphs of text in the markdown file used for generating this blog post illustrates how the markdown coding works:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+layout: post
+title: &quot;Set up blog tools: Jekyll and Atom&quot;
+date: &quot;2017-12-21 07:58&quot;
+---
+**Contents**
+	- [Introduction](#introduction)
+	- [Install Atom](#install-atom)
+...
+
+...
+## Introduction
+
+This blog post is for remembering how I set up the tools for writing my own blog posts.
+
+After looking at different alternatives, I decided to try [Jekyll](https://jekyllrb.com) that is available from [GitHub](https://github.com).
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The code snippet between the triple hyphens (—) at the beginning is the YAML front matter. For this blog post it only defines the document layout and title, but it can include several other definitions.&lt;/p&gt;
+
+&lt;h2 id=&quot;next-blog---setup-github-pages&quot;&gt;Next blog - Setup GitHub pages&lt;/h2&gt;
+
+&lt;p&gt;This blog post is set up using the Jekyll default theme (minima).  My &lt;a href=&quot;https://thomasgumbricht.github.io/setup-github/index.html&quot;&gt;next blog&lt;/a&gt;, is created without any template, and includes how to publish the blog on &lt;a href=&quot;https://github.com&quot;&gt;GitHub.com&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://discountry.github.io/2017/02/15/use-atom-as-your-markdown-editor/&quot;&gt;Atom&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://pragmaticstudio.com/blog/2010/9/23/install-rails-ruby-mac&quot;&gt;Install Ruby&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://jekyllrb.com/docs/home/&quot;&gt;Jekyll&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/jekyll/minima&quot;&gt;Jekyll mimina theme&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://help.github.com/articles/customizing-css-and-html-in-your-jekyll-theme/&quot;&gt;Customizing CSS&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&quot;&gt;Markdown Cheatsheet&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://thomasgumbricht.github.io/setup-github/index.html&quot;&gt;Setup GitHub pages&lt;/a&gt; my next blog&lt;/p&gt;</content><author><name></name></author><summary type="html">Contents - Introduction - Install Atom - Install Jekyll dependencies - Opening and understanding the Terminal - Install Xcode and its Command Line Tool - Install Homebrew - Install Ruby Version Manger (RVM) - Install Ruby - Install Jekyll - Edit the configuration (_config.yml) - Cusomized CSS - Extending the CSS - Customised _includes - Writing this blog post - Next blog (Setup GitHub pages) - Resources</summary></entry></feed>

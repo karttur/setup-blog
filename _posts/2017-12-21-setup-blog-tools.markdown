@@ -207,7 +207,7 @@ The Jekyll example blog is of course not want you want to publish. The main cont
 
 Start <span class='app'>Atom</span>, and wait for the <span class = 'tab'>Welcome Guide</span> pane to open. In the <span class = 'tab'>Welcome Guide</span> click <span class = 'button'>Open Project</span>, then navigate to the folder you created with Jekyll (<span class = 'file'>setup-blog</span>), and select the folder itself as the Project. A <span class = 'tab'>Project</span> pane will open in the Atom window. In the <span class = 'tab'>Project</span> pane, click the <span class = 'file'>\_config.yml</span> file.
 
-<span class = 'file'>\_config.yml</span> file is well commented, and you can enter the details for the blog you are about to create. Change the title, description and baseurl tags, where the latter should have the same name as your Project (which will become an online repository if you later share it in GitHub as described in the [next blog](https://thomasgumbricht.github.io/setup-github/index.html)). Here is an excerpt of <span class = 'file'>\_config.yml</span> for this blog post:
+<span class = 'file'>\_config.yml</span> file is well commented, and you can enter the details for the blog you are about to create. Change the title, description and baseurl tags, where the latter should have the same name as your Project (which will become an online repository if you later share it in GitHub as described in the [next blog](https://karttur.github.io/setup-github/index.html)). Here is an excerpt of <span class = 'file'>\_config.yml</span> for this blog post:
 
 ```
 title: Geo Imagine Developer
@@ -364,7 +364,7 @@ The code snippet between the triple hyphens (---) at the beginning is the YAML f
 
 ## Next blog - Setup GitHub pages
 
-This blog post is set up using the Jekyll default theme (minima).  My [next blog](https://thomasgumbricht.github.io/setup-github/index.html), is created without any template, and includes how to publish the blog on [GitHub.com](https://github.com).
+This blog post is set up using the Jekyll default theme (minima).  My [next blog](https://karttur.github.io/setup-github/index.html), is created without any template, and includes how to publish the blog on [GitHub.com](https://github.com).
 
 ## Resources
 
@@ -382,4 +382,4 @@ This blog post is set up using the Jekyll default theme (minima).  My [next blog
 
 [Web safe CSS fonts](https://www.cssfontstack.com)
 
-[Setup GitHub pages](https://thomasgumbricht.github.io/setup-github/index.html) my next blog
+[Setup GitHub pages](https://karttur.github.io/setup-github/index.html) my next blog

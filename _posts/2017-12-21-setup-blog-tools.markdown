@@ -29,9 +29,9 @@ After looking at different alternatives, I decided to try [Jekyll](https://jekyl
 
 Jekyll expects a ['markdown'](https://daringfireball.net/projects/markdown) file for each blog, and I needed to find a text editor that facilitates generating markdown text files. Browsing different alternatives I settled for [Atom](https://atom.io). Atom is advertised as 'A hackable text editor', and it resembles the text editor (TeXShop) that I use for scientific writing.
 
-This blog covers the installation and setup of Jekyll and Atom on a local machine, and generating a web page on your local machine. The [next blog](../../github-setup) covers a bit more about organizing a Jekyll site, and how to publish Jekyll sites to GitHub.com. And then a [third blog](../../../setup-theme-blog) is about using a more rich template Theme for Jekyll. The three blogs are available in different repositories on [GitHub.com](https://github.com). They are on different sites because they use different Jekyll setups.
+This blog covers the installation and setup of Jekyll and Atom on a local machine, and generating a web page on your local machine. The [next blog](https://karttur.github.io/setup-github/index.html) covers a bit more about organizing a Jekyll site, and how to publish Jekyll sites to GitHub.com. And then a [third blog](https://karttur.github.io/setup-theme-blog/index.html) is about using a more rich template Theme for Jekyll. The three blogs are available in different repositories on [GitHub.com](https://github.com). They are on different sites because they use different Jekyll setups.
 
-If you want to download the complete Jekyll setup for this blog it is available as a [GitHub repository](https://github.com/karttur/setup-github/tree/gh-pages).
+If you want to download the complete Jekyll setup for this blog it is available as a [GitHub repository](https://github.com/karttur/setup-blog/tree/gh-pages).
 
 ## Install Atom
 [//]: # (https://discountry.github.io/2017/02/15/use-atom-as-your-markdown-editor/)

@@ -4,4 +4,8 @@ title: About
 permalink: /about/
 ---
 
-The Geo Imagine Developer blog is maintained by Thomas Gumbricht (Karttur AB) [karttur.com](https://karttur.com/)
+Karttur is a private research company in Stockholm, Sweden. Karttur is really just the legal frontend of Thomas Gumbricht, backend, research efforts.
+
+This blog contains a single page, with instructions for how to install Jekyll and the text editor Atom. The blog is created by Jekyll using the Jekyll default theme minima, with editing done in Atom. How this is done is covered in the web page.
+
+Karttur´s GitHub repositories and we pages are  maintained by Thomas Gumbricht.

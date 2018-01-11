@@ -5,51 +5,78 @@
 /*
    Styles for span classes to identify different object types
    ========================================================================== */
-.terminal {
+   .terminal {
+          background-color: black;
+          color: white;
+          font-family: "Courier New", Courier, Monospace;
+          font-size:large;
+      }
+   .terminalapp {
        background-color: black;
        color: white;
        font-family: "Courier New", Courier, Monospace;
        font-size:large;
-   }
-.menu {
-       background-color: #DCDCDC;
-       color: black;
-       font-family: "Times New Roman", Times, serif;
-       font-size:large;
-       border: 1px solid black;
-   }
-.finder {
-       color: #808080;
-       font-family: "Lucida Grande", Tahoma, Sans-serif;
-   }
-.file {
-      color: #808080;
-      font-family: "Lucida Grande", Tahoma, Sans-serif;
+       font-style: italic;
+     }
+   .menu {
+          background-color: #DCDCDC;
+          color: black;
+          font-family: "Times New Roman", Times, serif;
+          font-size:large;
+          border: 1px solid black;
       }
-.button {
-        background-color: #99ff99;
-        color: #006600;
-        font-family: "Lucida Grande", Tahoma, Sans-serif;
-        border: 1px solid black;
+   .finder {
+           color: black;
+           font-family: "Courier New", Courier, Monospace;
+           font-size:large;
+           font-weight: bold;
       }
-.textbox{
-        color: black;
-        font-family: "Lucida Grande", Tahoma, Sans-serif;
-        border: 1px solid black;
-      }
-.checkbox{
-        background-color: #e6e6ff;
-        color: black;
-        font-family: "Lucida Grande", Tahoma, Sans-serif;
-      }
-.tab{
-        background-color: #ffffb3;
-        color: #392613;
-        font-family: "Lucida Grande", Tahoma, Sans-serif;
-        border: 1px solid #392613;
-    }
+   .file {
+           color: black;
+           font-family: "Courier New", Courier, Monospace;
+           font-size:large;
+           font-weight: bold;
+         }
+   .button {
+           background-color: #99ff99;
+           color: #006600;
+           font-family: "Lucida Grande", Tahoma, Sans-serif;
+           border: 1px solid black;
+         }
+   .textbox{
+           color: black;
+           font-family: "Lucida Grande", Tahoma, Sans-serif;
+           border: 1px solid black;
+         }
+   .checkbox{
+           background-color: #e6e6ff;
+           color: black;
+           font-family: "Lucida Grande", Tahoma, Sans-serif;
+         }
+   .tab{
+           background-color: #ffffb3;
+           color: #392613;
+           font-family: "Lucida Grande", Tahoma, Sans-serif;
+           border: 1px solid #392613;
+       }
 
-.app{
-      color: red;
-      font-family: "Lucida Grande", Tahoma, Sans-serif;
-    }
+   .app{
+         color: #800000;
+         font-family: "Lucida Grande", Verdana, Sans-serif;
+       }
+   .package{
+         color: black;
+         font-family: $py-font;
+       }
+   .pydef{
+         color: black;
+         font-family: $py-font;
+       }
+   .module{
+         color: black;
+         font-family: $py-font;
+
+       }
+   .terminalapp{
+         font-family: $code-font;
+       }

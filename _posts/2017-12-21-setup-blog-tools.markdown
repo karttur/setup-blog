@@ -372,7 +372,9 @@ This blog post is set up using the Jekyll default theme (minima).  My [next blog
 
 ## Resources
 
-[Atom](https://discountry.github.io/2017/02/15/use-atom-as-your-markdown-editor/)
+[Atom](https://atom.io)
+
+[Atom mardown editing](https://discountry.github.io/2017/02/15/use-atom-as-your-markdown-editor/)
 
 [Install Ruby](https://pragmaticstudio.com/blog/2010/9/23/install-rails-ruby-mac)
 

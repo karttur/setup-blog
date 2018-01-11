@@ -7,7 +7,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   inventories and monitoring.
 baseurl: "/setup-blog" # the subpath of your site, e.g. /blog
 #url: "" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  thomasgumbricht
+github_username:  karttur
 rouge: true
 # Build settings
 markdown: kramdown

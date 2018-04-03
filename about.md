@@ -10,4 +10,8 @@ This blog contains a single page, with instructions for how to install Jekyll an
 
 [Overview](https://karttur.github.io/overview/) of Karttur´s web pages and repositories on GitHub.
 
+Link to [Thomas Gumbricht professional resumé](https://karttur.github.io/professional/).
+
+Link to [Karttur AB](https://karttur.com/).
+
 Karttur´s GitHub repositories and web pages are maintained by Thomas Gumbricht.

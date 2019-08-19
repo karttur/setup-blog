@@ -85,6 +85,9 @@ You will use the Terminal quite a lot if you follow this blog, so it is handy to
 where 'computername' is the name of the computer, the tilde (~) indicates that you are in your home directory, 'myuser' the name of the current user, and a trailing $ which is the prompt for input.
 
 ### Install Xcode and its Command Line Tool
+
+**Note**, with later versions of Brew (Homebrew), the necessary Command Line Tool is automatically installed when you install Brew. Thus you can safe this step, unless you also intend to use Xcode.
+
 Before installing Jekyll on a mac, the Apple developer environment Xcode, and its [Command Line Tool](https://idmsa.apple.com/IDMSWebAuth/login?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&path=%2Fdownload%2Fmore%2F&rv=1), must be installed.
 
 Xcode is an app, and if you have it installed, it will be in your <span class ='finder'>/Applications</span> folder. If not, Xcode is available from the Apple <span class='app'>App store</span>, that is installed with all recent macOS:
@@ -99,7 +102,7 @@ If a version is returned, you are probably fine to go. Otherwise, you must downl
 
 ### Install Homebrew
 
-Homebrew in a package (or app) manager, that installs apps on macOS platforms. There are alternatives to Homebrew (including Fink and MacPorts). I have tried them all, and I like Homebrew better than the other two.
+[Homebrew](https://brew.sh) (or Brew for short) in a package (or app) manager, that installs apps on macOS platforms. There are alternatives to Homebrew (including Fink and MacPorts). I have tried them all, and I like Homebrew better than the other two.
 
 To install Homebrew, open a <span class='app'>Terminal</span> window and type (or copy and paste) the command:
 
@@ -133,27 +136,33 @@ in all your open Terminal windows. Then close all open Terminal windows, and reo
 
 Confirm that RVM is being properly loaded in the new Terminal session by typing
 
-<span class = 'terminal'>$ rvm --version</span>
+<span class = 'terminal'>$ rvm version</span>
+
+Older versions required a hyphen in from of version (<span class = 'terminal'>$ rvm --version</span>), but with later versions you have to omit the hyphen.
 
 You should see a version number with no errors.
 
 ### Install Ruby
 
-With RVM installed, install the latest Ruby version (2.4.3 at time of writing) from the Terminal:
+With RVM installed, install the latest Ruby version (2.6.3 at time of writing the update in August 2019) from the Terminal:
 
-<span class = 'terminal'>$ rvm install 2.4.3</span>
+<span class = 'terminal'>$ rvm install 2.6.3</span>
 
 The RVM installation will first search for a predefined (binary) installer, and if not proceed to compile the requested version from source. In the latter case RVM relies on Homebrew. If Homebrew is not installed, RVM will automatically install Homebrew after asking for permission.
 
 When the installation is done, close your Terminal session and open a new Terminal session. Set the version of Ruby that you installed to the current version by typing:
 
-<span class = 'terminal'>$ rvm --default use 2.4.3</span>
+<span class = 'terminal'>$ rvm default use 2.6.3</span>
+
+or (<span class = 'terminal'>$ rvm -default use 2.6.3</span>)
 
 This also sets the default version to be used whenever you open any new Terminal session.
 
 Verify that the current Ruby version by typing
 
 <span class = 'terminal'>$ ruby -v</span>
+
+(Ruby itself still required the hyphen, it is only RVM taht can do without.)
 
 Generate the core Ruby documentation by typing
 

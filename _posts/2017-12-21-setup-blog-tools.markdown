@@ -86,7 +86,7 @@ where 'computername' is the name of the computer, the tilde (~) indicates that y
 
 ### Install Xcode and its Command Line Tool
 
-**Note**, with later versions of Brew (Homebrew), the necessary Command Line Tool is automatically installed when you install Brew. Thus you can safe this step, unless you also intend to use Xcode.
+**Note**, with later versions of Brew (Homebrew), the necessary Command Line Tool is automatically installed when you install Brew. Thus you can safely skip this step, unless you also intend to use Xcode.
 
 Before installing Jekyll on a mac, the Apple developer environment Xcode, and its [Command Line Tool](https://idmsa.apple.com/IDMSWebAuth/login?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&path=%2Fdownload%2Fmore%2F&rv=1), must be installed.
 
@@ -162,7 +162,7 @@ Verify that the current Ruby version by typing
 
 <span class = 'terminal'>$ ruby -v</span>
 
-(Ruby itself still required the hyphen, it is only RVM taht can do without.)
+(Ruby itself still requires the hyphen, it is only RVM taht can do without.)
 
 Generate the core Ruby documentation by typing
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Set up blog tools: Jekyll and Atom"
+title: "Set up blog tools: Atom, Homebrew and Jekyll"
 date: "2017-12-21 07:58"
 ---
 **Contents**
@@ -20,6 +20,8 @@ date: "2017-12-21 07:58"
 		- [Writing this blog post](#writing-this-blog-post)
 	- [Next blog (Setup GitHub pages)](#next-blog-setup-github-pages)
 	- [Resources](#resources)
+
+Last update: 15 oct 2021
 
 ## Introduction
 
@@ -96,7 +98,13 @@ Xcode is an app, and if you have it installed, it will be in your <span class ='
 
 You also need the Xcode Command Line Tool, that includes a compiler for Open Source projects called GCC. To check if you have GCC installed, open a <span class='app'>Terminal</span> window and type at the prompt:
 
+for older versions:
+
 <span class = 'terminal'>$ gcc --version</span>
+
+and more recent:
+
+<span class = 'terminal'>$ gcc --v</span>
 
 If a version is returned, you are probably fine to go. Otherwise, you must download and install the [Command Line Tools](https://developer.apple.com/xcode/features/) for Xcode. To access the downloads you may need to register as an Apple developer. Once you are on the downloads page, search the appropriate version of your macOS. Click on the .dmg link to download it. Once it has finished downloading, simply double-click the .dmg file and then double-click the enclosed .pkg file to start the installation process.
 
@@ -104,11 +112,64 @@ If a version is returned, you are probably fine to go. Otherwise, you must downl
 
 [Homebrew](https://brew.sh) (or Brew for short) in a package (or app) manager, that installs apps on macOS platforms. There are alternatives to Homebrew (including Fink and MacPorts). I have tried them all, and I like Homebrew better than the other two.
 
-To install Homebrew, open a <span class='app'>Terminal</span> window and type (or copy and paste) the command:
+To install Homebrew, open a <span class='app'>Terminal</span> window and type (or copy and paste) the command (tested 15 October 2021):
 
-<span class = 'terminal'>$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</span>
+<span class = 'terminal'>$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</span>
 
 Homebrew will create a special repository of installed packages and then symlinks their files into <span class='file'>/usr/local</span>.
+
+```
+==> Checking for `sudo` access (which may request your password).
+Password:
+==> This script will install:
+/usr/local/bin/brew
+/usr/local/share/doc/homebrew
+/usr/local/share/man/man1/brew.1
+/usr/local/share/zsh/site-functions/_brew
+/usr/local/etc/bash_completion.d/brew
+/usr/local/Homebrew
+==> The following new directories will be created:
+/usr/local/bin
+/usr/local/etc
+/usr/local/include
+/usr/local/lib
+/usr/local/sbin
+/usr/local/share
+/usr/local/var
+/usr/local/opt
+/usr/local/share/zsh
+/usr/local/share/zsh/site-functions
+/usr/local/var/homebrew
+/usr/local/var/homebrew/linked
+/usr/local/Cellar
+/usr/local/Caskroom
+/usr/local/Frameworks
+
+Press RETURN to continue or any other key to abort
+```
+
+If the installation went well:
+
+```
+==> Installation successful!
+
+==> Homebrew has enabled anonymous aggregate formulae and cask analytics.
+Read the analytics documentation (and how to opt-out) here:
+  https://docs.brew.sh/Analytics
+No analytics data has been sent yet (or will be during this `install` run).
+
+==> Homebrew is run entirely by unpaid volunteers. Please consider donating:
+  https://github.com/Homebrew/brew#donations
+
+==> Next steps:
+- Run `brew help` to get started
+- Further documentation:
+    https://docs.brew.sh
+```
+
+Update Homebrew with the command:
+
+<span class = 'terminal'>$ brew update</span>
 
 Note that Homebrew uses the macOS version of Ruby, but it is better to have a separate Ruby installation for handling non system Apps, including Jekyll. The next step is thus to install the Ruby Version Manager (RVM) and then the latest version of Ruby as a separate stand alone app.
 
@@ -144,17 +205,17 @@ You should see a version number with no errors.
 
 ### Install Ruby
 
-With RVM installed, install the latest Ruby version (2.6.3 at time of writing the update in August 2019) from the Terminal:
+With RVM installed, install the latest Ruby version (3.0.2 at time of writing the update in October 2021) from the Terminal:
 
-<span class = 'terminal'>$ rvm install 2.6.3</span>
+<span class = 'terminal'>$ rvm install 3.0.2</span>
 
 The RVM installation will first search for a predefined (binary) installer, and if not proceed to compile the requested version from source. In the latter case RVM relies on Homebrew. If Homebrew is not installed, RVM will automatically install Homebrew after asking for permission.
 
 When the installation is done, close your Terminal session and open a new Terminal session. Set the version of Ruby that you installed to the current version by typing:
 
-<span class = 'terminal'>$ rvm default use 2.6.3</span>
+<span class = 'terminal'>$ rvm default use 3.0.2</span>
 
-or (<span class = 'terminal'>$ rvm -default use 2.6.3</span>)
+or (<span class = 'terminal'>$ rvm -default use 3.0.2</span>)
 
 This also sets the default version to be used whenever you open any new Terminal session.
 
@@ -162,7 +223,7 @@ Verify that the current Ruby version by typing
 
 <span class = 'terminal'>$ ruby -v</span>
 
-(Ruby itself still requires the hyphen, it is only RVM taht can do without.)
+(Ruby itself still requires the hyphen, it is only RVM that can do without.)
 
 Generate the core Ruby documentation by typing
 

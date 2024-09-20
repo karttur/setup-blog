@@ -21,7 +21,7 @@ date: "2017-12-21 07:58"
 	- [Next blog (Setup GitHub pages)](#next-blog-setup-github-pages)
 	- [Resources](#resources)
 
-Last update: 15 oct 2021
+Last update: 20 Sept 2024
 
 ## Introduction
 
@@ -37,14 +37,27 @@ If you want to download the complete Jekyll setup for this blog it is available 
 
 ## Install Atom
 [//]: # (https://discountry.github.io/2017/02/15/use-atom-as-your-markdown-editor/)
-Installing Atom is much simpler than installing Jekyll, and you will also need Atom for some text editing for creating your blog. So let us start with installing Atom.
+[Atom]((https://atom.io)) was sunsetted December 15, 2022. You can still install the last version (1.63) but to get it running might demand some tweaking. This blog was updated in September 2024 with instructions for installing Atom on an Apple computer with the M1 chip.
 
-For macOS, Atom is available as a disk image, and is installed by [downloading](https://atom.io), and opening the diskimage, and then just dragging <span class='file'>Atom.app</span> to the <span class='finder'>/Applications</span> folder.
+The saved binary installations for Atom are available from [GitHub](https://github.com/atom/atom/releases/tag/v1.60.0). In the Assets list, dowload the binary version that fits your operating system. For MacOS running on an M1 chip I chose _atom-mac.zip_.
+
+When the selected version is downloaded. unzip the binary. For my MacOS running on an M1 chip, I get the message
+
+To open "Atom.app", you need to install Rosetta. Do you want to install it now?
+
+Click the Install alternative and Rosetta should install after you give your password. Once Rosetta was installed, Atom worked as before.
 
 Atom can be used for many writing and editing tasks, of which generating markdown text is only one. To set up Atom for creating markdown files, you need to install the necessary packages. For this blogpost I used three packages:
 - markdown-writer,
-- markdown-preview-plus, and
-- markdown-toc.
+- markdown-preview-plus,
+- markdown-toc,
+- pretty-json.
+
+Since Atom was sunsetted you can not add any packages. There is (was?) a community based effort to continue Atom called [pulsar](https://pulsar-edit.dev) that might be an alternative.
+
+I had an old Atom library (~/library/Appliction Support/Atom) that I could reuse for my previously installed packages.
+
+### The following instructions are outdated
 
 To install these packages, start <span class='app'>Atom</span>. Then go via the Atom menu:
 
